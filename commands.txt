@@ -1,0 +1,35 @@
+1. sudo make clean
+2. motelist
+3. sudo make my-udp-light.upload MOTES=/dev/ttyUSB0
+4. sudo make login MOTES=/dev/ttyUSB0
+5. if make.target doesnt exist then run => sudo make TARGET=zoul savetarget
+6. sudo chmod 777 my-udp-light.c
+
+
+connect device
+vmware player then removable device connect device
+
+in terminal
+motelist (to get device listed)
+cd into contiki-ng/examples/my_aes
+sudo make clean
+
+sudo make login MOTES=/dev/ttyUSB0
+click on the button marked as set
+
+sudo make aes-enc-ti.upload MOTES=/dev/ttyUSB0
+sudo make aes-cbc-dec-cc2538.upload MOTES=/dev/ttyUSB0
+
+
+sudo make aes-enc-ti.upload MOTES=/dev/ttyUSB0
+sudo make aes-cbc-dec-cc2538.upload MOTES=/dev/ttyUSB0
+
+
+sudo make my-udp-light.upload MOTES=/dev/ttyUSB0
+sudo make my-udp-light.upload MOTES=/dev/ttyUSB0
+
+sudo make sensniff.upload MOTES=/dev/ttyUSB0
+sudo make sensniff.upload MOTES=/dev/ttyUSB0
+
+
+unicast and multicast
