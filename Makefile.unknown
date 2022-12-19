@@ -1,0 +1,22 @@
+### List the examples in the directory we want to compile
+DEFINES+=PROJECT_CONF_H=\"project-conf.h\"
+CONTIKI_PROJECT = 01-hello-world 02-led-and-button 03-timers 04-processes \
+                  05-onboard-sensors 06-adc 07-gpio test-motion test-light-sensor
+
+### When using the "make" command it will compile all examples above
+
+CONTIKI_TARGET_SOURCEFILES += tsl256x.c sht25.c bmpx8x.c motion-sensor.c
+CONTIKI_TARGET_SOURCEFILES += adc-sensors.c weather-meter.c grove-gyro.c
+CONTIKI_TARGET_SOURCEFILES += rgb-bl-lcd.c pm10-sensor.c iaq.c zonik.c relay.c
+CONTIKI_TARGET_SOURCEFILES += dht22.c servo.c ac-dimmer.c bme280-arch.c
+
+all: $(CONTIKI_PROJECT)
+
+MODULES += /dev/bme280
+
+### Location of the Contiki root folder
+CONTIKI = ../../../..
+
+include $(CONTIKI)/Makefile.include
+
+include ../Makefile.include
