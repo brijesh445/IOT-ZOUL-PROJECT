@@ -1,0 +1,8 @@
+#for client
+1. make TARGET=zoul savetarget 
+2. make clean && make client.upload MOTES=/dev/ttyUSB0 && make login
+
+
+#for server
+1. make TARGET=zoul savetarget 
+2. make clean && make server.upload MOTES=/dev/ttyUSB0 && make login
